@@ -1,0 +1,20 @@
+{% extends "base.html "%}
+{% block content %}
+<h1>
+    Delete
+</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    <p>Confim Delete {{object}}</p>
+<a a href="{% url 'datasumary' %}">
+<button>
+    Cancel
+</button>
+</a>
+<input type="submit" value="Confirm">
+
+</form>
+      
+{% endblock content %}
+    

@@ -1,0 +1,32 @@
+<head>
+    <title>
+         Data processing
+     </title>
+    
+ </head>
+
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<h1>Customer Data Processing</h1>
+
+<p><button> <a href="{% url 'datasumary' %}">Current Customers </a>  </button></p>
+
+  <form action="" method="POST">
+    {% csrf_token %}
+
+    {{form.as_p}}
+
+    <input type="submit">
+
+</form>  
+
+
+
+
+
+
+{% endblock %}
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+{% load static from static %}
+
+<html>
+<head>
+ 
+  {% if tittle %}
+    <title> {{ title }} </title>
+    {% else %}
+    <title>LOAN-APPLICATION</title>
+  {% endif %}
+
+
+<!--<link rel='stylesheet' type='text/css' media='screen' 
+href='{% static "style/styling.css" %}'> -->
+
+<link href='{% static  "css/bootstrap.min.css" %}'rel="stylesheet" type="text/css">
+<link href='{% static "font-awesome/css/font-awesome.min.css" %}' rel="stylesheet" type="text/css" />	
+<!-- Custom Theme files -->
+<link href='{% static "css/style.css"  %}' rel='stylesheet' type='text/css' />
+</head>
+<body>
+  <!--  {% static ""  %} --> 
+  
+<nav class="navbar navbar-default navbar-static-top text-center" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/homepage/">
+					<img src= '{% static "images/log.png"  %}' class="hidden-xs" alt="" style="width: 300px;">
+					<h3 class="visible-xs">Alpha</h3>
+				</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+        
+					<li>
+                        <a class="page-scroll" href="/homepage/"></a>
+                    </li>
+					<li>
+                        <a class="page-scroll" href="/dataprocessing/">Data Processing</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/datasumary/">DataSummary</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{% url 'bankstaff' %}">Bank Employees</a>
+                    </li>
+                    <li>
+                  <a class="page-scroll" href="{% url 'account' %}">Account Settings</a>
+              </li>  
+                  <li>
+                    <a class="page-scroll" href="{% url 'logout' %}">Log Out</a>
+                </li>
+
+              
+                
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+
+   
+   <!--<nav>
+
+      <a href="/homepage/">Hompage</a> |
+      <a href="/dataprocessing/">Data Processing</a> |
+      <a href="/datasumary/">Data summary </a> |
+      
+      
+    </nav> --->
+    
+{% block content %}
+
+
+
+
+
+
+{% endblock %}
+
+
+
+<footer>
+   <p>Alpha Dreamers banking coorporation</p>
+   <p><a href="#">hege@example.com</a></p>
+</footer>
+
+</body>
+</html>
