@@ -1,2 +1,2 @@
 # loansproject
- AI-webApp
+A django web application for loan managment 
